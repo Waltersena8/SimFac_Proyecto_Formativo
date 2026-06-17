@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SimFac — Categorías</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="Img/favicon.svg">
+<link rel="stylesheet" href="CSS/styles.css">
+<link rel="stylesheet" href="CSS/categorias.css">
+</head>
+<body>
+
+<div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<!-- ══ SIDEBAR ══ -->
+<aside class="sidebar" id="sidebar">
+  <a href="index.html" class="sidebar-logo">
+    <div class="logo-mark">S</div>
+    <div class="logo-text">Sim<span>Fac</span></div>
+  </a>
+  <div class="rest-badge">
+    <div class="rest-avatar">🍖</div>
+    <div>
+      <div class="rest-name">La Fogata</div>
+      <div class="rest-status"><div class="status-dot"></div> Menú activo</div>
+    </div>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">General</div>
+    <a class="nav-item" href="dashboard.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      Dashboard
+    </a>
+    <a class="nav-item" href="pedidos.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+      Pedidos
+      <span class="nav-badge">3</span>
+    </a>
+    <div class="nav-section-label">Menú</div>
+    <a class="nav-item active" href="categorias.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+      Categorías
+      <span class="nav-badge amber">4</span>
+    </a>
+    <a class="nav-item" href="productos.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.96-1.59l1.54-7.41H6"/></svg>
+      Productos
+      <span class="nav-badge amber">12</span>
+    </a>
+    <div class="nav-section-label">Cuenta</div>
+    <a class="nav-item" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+      Mi perfil
+    </a>
+    <a class="nav-item" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06-.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+      Configuración
+    </a>
+  </nav>
+  <div class="sidebar-bottom">
+    <a class="nav-item" href="login.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      Cerrar sesión
+    </a>
+  </div>
+</aside>
+
+<!-- ══ MAIN ══ -->
+<div class="main-area">
+
+  <header class="topbar">
+    <button class="ham-btn" onclick="toggleSidebar()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div>
+      <div class="topbar-title">Categorías</div>
+      <div class="breadcrumb">
+        <a href="dashboard.html">Dashboard</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Categorías</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <a href="menu.html" class="topbar-btn" title="Ver mi menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+      <div class="topbar-avatar">LF</div>
+    </div>
+  </header>
+
+  <div class="page-content">
+
+    <!-- Header -->
+    <div class="page-header">
+      <div>
+        <h1>Gestión de <em>categorías</em></h1>
+        <p>Organiza tu menú agrupando los productos en categorías.</p>
+      </div>
+      <button class="btn-primary" onclick="newCategory()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Nueva categoría
+      </button>
+    </div>
+
+    <!-- Mini stats -->
+    <div class="mini-stats">
+      <div class="mini-card">
+        <div class="mini-icon ic-amber">📂</div>
+        <div>
+          <div class="mini-val" id="totalCats">4</div>
+          <div class="mini-lbl">Categorías totales</div>
+        </div>
+      </div>
+      <div class="mini-card">
+        <div class="mini-icon ic-green">✅</div>
+        <div>
+          <div class="mini-val">4</div>
+          <div class="mini-lbl">Categorías activas</div>
+        </div>
+      </div>
+      <div class="mini-card">
+        <div class="mini-icon ic-blue">🛒</div>
+        <div>
+          <div class="mini-val">12</div>
+          <div class="mini-lbl">Productos en total</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main layout -->
+    <div class="cat-layout">
+
+      <!-- Left: categories list -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+            Mis categorías
+          </div>
+          <span style="font-size:.75rem; color:var(--muted);">Arrastra para reordenar</span>
+        </div>
+
+        <div class="search-bar">
+          <div class="search-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input class="search-input" type="text" placeholder="Buscar categoría..." id="searchInput" oninput="filterCats()">
+          </div>
+          <button class="filter-btn" onclick="sortCats()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            Ordenar
+          </button>
+        </div>
+
+        <div class="cat-cards-grid" id="catCardsGrid">
+          <!-- rendered by JS -->
+        </div>
+
+        <div class="drag-hint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 9 2 12 5 15"/><polyline points="19 9 22 12 19 15"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+          Arrastra las tarjetas para cambiar el orden en el menú
+        </div>
+
+        <div class="empty-state" id="emptyState">
+          <div class="empty-icon">📂</div>
+          <div class="empty-title">No hay categorías</div>
+          <p class="empty-sub">Crea tu primera categoría usando el formulario.</p>
+        </div>
+      </div>
+
+      <!-- Right: form + tip -->
+      <div class="right-col">
+
+        <!-- Form -->
+        <div class="form-panel">
+          <div class="form-panel-header">
+            <div class="form-panel-icon" id="formIcon">➕</div>
+            <div>
+              <div class="form-panel-title" id="formTitle">Nueva categoría</div>
+              <div class="form-panel-sub" id="formSub">Completa los datos para agregar</div>
+            </div>
+          </div>
+
+          <div class="form-body">
+
+            <div class="field">
+              <label>Nombre <span class="required">*</span></label>
+              <div class="input-wrap">
+                <input type="text" id="fName" placeholder="Ej: Platos fuertes, Bebidas...">
+                <svg class="icon-l" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Descripción <span class="opt">(opcional)</span></label>
+              <textarea id="fDesc" placeholder="Describe brevemente esta categoría..."></textarea>
+            </div>
+
+            <div class="field">
+              <label>Ícono <span class="required">*</span></label>
+              <div class="emoji-picker-row" id="emojiPicker">
+                <!-- rendered by JS -->
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Color de acento <span class="required">*</span></label>
+              <div class="color-row" id="colorPicker">
+                <!-- rendered by JS -->
+              </div>
+            </div>
+
+            <!-- Live preview -->
+            <div class="cat-preview">
+              <div class="preview-label">Vista previa</div>
+              <div class="preview-card-mini">
+                <div class="preview-bar-mini" id="prevBar" style="background:#F5A623;"></div>
+                <div class="preview-inner-mini">
+                  <div class="preview-emoji-mini" id="prevEmoji" style="background:rgba(245,166,35,0.1);">🍖</div>
+                  <div>
+                    <div class="preview-name-mini" id="prevName">Nombre de categoría</div>
+                    <div class="preview-count-mini">0 productos</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn-cancel" onclick="resetForm()">Cancelar</button>
+              <button class="btn-save" onclick="saveCategory()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span id="btnSaveText">Guardar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip -->
+        <div class="order-tip">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <p><strong>Consejo:</strong> El orden de las categorías aquí determina el orden en que tus clientes las verán en el menú digital. Arrastra las tarjetas para reorganizarlas.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Delete modal -->
+<div class="modal-overlay" id="delModal">
+  <div class="del-modal">
+    <div class="del-icon">🗑️</div>
+    <div class="del-title">Eliminar categoría</div>
+    <p class="del-sub">¿Estás seguro de que quieres eliminar <strong id="delCatName">esta categoría</strong>? Los productos dentro de ella <strong>no se eliminarán</strong>, pero quedarán sin categoría.</p>
+    <div class="del-actions">
+      <button class="btn-del-cancel" onclick="closeDelModal()">Cancelar</button>
+      <button class="btn-del-confirm" onclick="confirmDelete()">Sí, eliminar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastMsg">Guardado correctamente</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Js/script.js"></script>
+<script src="Js/categorias.js"></script>
+</body>
+</html>

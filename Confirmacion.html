@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Fogata — Pedido Confirmado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="Img/favicon.svg">
+<link rel="stylesheet" href="CSS/styles.css">
+<link rel="stylesheet" href="CSS/confirmacion.css">
+</head>
+<body>
+
+<canvas id="confettiCanvas"></canvas>
+
+<div class="app">
+
+  <!-- SUCCESS HERO -->
+  <div class="success-hero">
+    <div class="success-ring-wrap">
+      <div class="success-ring">
+        <svg class="success-check" viewBox="0 0 44 44">
+          <polyline points="8 22 18 32 36 14" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    <h1 class="success-title">¡Pedido<br><em>enviado!</em></h1>
+    <p class="success-sub">Tu pedido llegó a cocina. Estamos preparando todo con cariño 🍖</p>
+    <div class="order-num-badge">
+      <div>
+        <div class="order-num-label">Número de pedido</div>
+        <div class="order-num-val" id="orderNum">#037</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATUS TRACKER -->
+  <div class="tracker-section">
+    <div class="tracker-title">Estado de tu pedido</div>
+    <div style="position:relative;">
+      <div class="tracker">
+        <div class="tracker-step">
+          <div class="t-circle done">✅</div>
+          <div class="t-label done">Recibido</div>
+        </div>
+        <div class="tracker-step">
+          <div class="t-circle active" id="step-prep">🔥</div>
+          <div class="t-label active" id="lbl-prep">En cocina</div>
+        </div>
+        <div class="tracker-step">
+          <div class="t-circle" id="step-ready">🍽️</div>
+          <div class="t-label" id="lbl-ready">Listo</div>
+        </div>
+        <div class="tracker-step">
+          <div class="t-circle" id="step-done">🤝</div>
+          <div class="t-label" id="lbl-done">Entregado</div>
+        </div>
+      </div>
+      <div class="tracker-line" id="trackerLine"></div>
+    </div>
+  </div>
+
+  <!-- ESTIMATED TIME -->
+  <div class="est-card">
+    <div class="est-icon">⏱️</div>
+    <div>
+      <div class="est-label">Tiempo estimado</div>
+      <div class="est-time">15 – 20 min</div>
+      <div class="est-note">El mesero te avisará cuando esté listo</div>
+    </div>
+    <div class="countdown-badge">
+      <div class="cd-num" id="countdownNum">18:00</div>
+      <div class="cd-lbl">minutos</div>
+    </div>
+  </div>
+
+  <!-- ORDER DETAIL -->
+  <div class="detail-section">
+    <div class="detail-card">
+      <div class="detail-header">
+        <div class="dh-title">Tu pedido</div>
+        <div class="dh-mesa" id="detailMesa">Mesa 4</div>
+      </div>
+      <div class="detail-items" id="detailItems">
+        <!-- filled by JS -->
+      </div>
+      <div class="detail-total">
+        <div class="dt-label">Total pagado</div>
+        <div class="dt-val" id="detailTotal">$0</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORDER NOTE -->
+  <div class="note-display" id="noteDisplay" style="display:none;">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    <div>
+      <div class="nd-label">Nota para cocina</div>
+      <div class="nd-text" id="noteText"></div>
+    </div>
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="actions-section">
+    <a href="menu.html" class="btn-primary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      Pedir algo más
+    </a>
+    <button class="btn-outline" onclick="shareOrder()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      Compartir resumen
+    </button>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="simfac-footer">
+    <div class="sf-powered">Menú digital impulsado por</div>
+    <a href="index.html" class="sf-logo">Sim<span>Fac</span></a>
+  </div>
+
+</div><!-- .app -->
+
+<!-- Status update toast -->
+<div class="status-toast" id="statusToast">
+  <div class="st-icon" id="stIcon">🔥</div>
+  <div>
+    <div class="st-title" id="stTitle">Tu pedido está en cocina</div>
+    <div class="st-sub"  id="stSub">El equipo ya lo está preparando</div>
+  </div>
+  <button class="st-close" onclick="closeStatusToast()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Js/script.js"></script>
+<script src="Js/confirmacion.js"></script>
+</body>
+</html>

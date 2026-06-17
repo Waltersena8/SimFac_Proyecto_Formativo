@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SimFac — Menús digitales para restaurantes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="Img/favicon.svg">
+<link rel="stylesheet" href="CSS/styles.css">
+<link rel="stylesheet" href="CSS/index.css">
+</head>
+<body>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Sim<span>Fac</span></a>
+  <div class="nav-links">
+    <a href="#features">Funciones</a>
+    <a href="#how">Cómo funciona</a>
+    <a href="#preview">Vista previa</a>
+    <a href="registro.html" class="btn-nav">Registrar restaurante →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="container">
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Menús digitales para restaurantes</div>
+      <h1>Tu menú,<br>en el <em>bolsillo</em><br>de todos.</h1>
+      <p class="hero-sub">SimFac transforma tu carta física en una experiencia digital elegante. Crea tu menú en minutos, comparte un enlace o código QR y recibe pedidos al instante.</p>
+      <div class="hero-actions">
+        <a href="registro.html" class="btn-primary">
+          Empieza gratis
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#how" class="btn-ghost">Ver cómo funciona ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">3 min</div>
+          <div class="stat-label">Para crear tu menú</div>
+        </div>
+        <div>
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Desde el celular</div>
+        </div>
+        <div>
+          <div class="stat-num">0 COP</div>
+          <div class="stat-label">Para empezar</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="phone-wrap">
+
+        <!-- Floating order badge -->
+        <div class="order-badge">
+          <div class="badge-dot"></div>
+          <div class="badge-text">
+            <div class="badge-title">¡Nuevo pedido!</div>
+            <div class="badge-sub">Mesa 4 · 3 items</div>
+          </div>
+        </div>
+
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-header">
+              <div class="rest-name">La Fogata</div>
+              <div class="rest-sub">Cocina tradicional · Cali</div>
+            </div>
+            <div class="phone-cats">
+              <div class="cat-pill">🔥 Populares</div>
+              <div class="cat-pill inactive">Bebidas</div>
+              <div class="cat-pill inactive">Platos</div>
+              <div class="cat-pill inactive">Postres</div>
+            </div>
+            <div class="phone-items">
+              <div class="phone-item">
+                <div class="item-emoji">🍖</div>
+                <div>
+                  <div class="item-name">Bandeja Paisa</div>
+                  <div class="item-desc">Frijoles, chicharrón, arroz...</div>
+                </div>
+                <div class="item-price">$28.000</div>
+                <button class="phone-btn">+</button>
+              </div>
+              <div class="phone-item">
+                <div class="item-emoji">🐟</div>
+                <div>
+                  <div class="item-name">Cazuela de Mariscos</div>
+                  <div class="item-desc">Camarones, calamar, coco...</div>
+                </div>
+                <div class="item-price">$35.000</div>
+                <button class="phone-btn">+</button>
+              </div>
+              <div class="phone-item">
+                <div class="item-emoji">🧃</div>
+                <div>
+                  <div class="item-name">Limonada de Coco</div>
+                  <div class="item-desc">Fresca, natural y cremosa</div>
+                </div>
+                <div class="item-price">$8.000</div>
+                <button class="phone-btn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating QR card -->
+        <div class="qr-card">
+          <div class="qr-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="1.5">
+              <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="5" y="5" width="3" height="3" fill="#F5A623" stroke="none"/><rect x="16" y="5" width="3" height="3" fill="#F5A623" stroke="none"/><rect x="5" y="16" width="3" height="3" fill="#F5A623" stroke="none"/>
+              <path d="M14 14h2v2h-2zM18 14h3v1h-3zM16 16h1v3h-1zM18 17h1v1h-1zM20 17h1v3h-1zM14 18h1v3h-1z" fill="#F5A623" stroke="none"/>
+            </svg>
+          </div>
+          <div class="qr-text">
+            <div class="qr-title">Código QR listo</div>
+            <div class="qr-sub">Comparte al instante</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="features-header reveal">
+      <div class="section-label">Por qué SimFac</div>
+      <h2 class="section-title">Todo lo que tu restaurante<br><em>necesita</em>, nada más.</h2>
+      <p class="section-sub">Sin complicaciones, sin apps extra, sin costos ocultos. Simplemente tu menú, digital y hermoso.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card reveal">
+        <div class="feat-icon">📱</div>
+        <div class="feat-title">Menú en segundos</div>
+        <p class="feat-desc">Crea categorías, agrega productos con foto, precio y descripción. Tu menú listo en minutos desde cualquier dispositivo.</p>
+      </div>
+      <div class="feat-card reveal" style="transition-delay:.1s">
+        <div class="feat-icon">🔗</div>
+        <div class="feat-title">Enlace y QR instantáneo</div>
+        <p class="feat-desc">Tu menú tiene su propio enlace único. Genera un código QR y ponlo en cada mesa — sin apps, sin descargas para el cliente.</p>
+      </div>
+      <div class="feat-card reveal" style="transition-delay:.2s">
+        <div class="feat-icon">🧾</div>
+        <div class="feat-title">Gestión de pedidos simple</div>
+        <p class="feat-desc">Los pedidos llegan directo a tu panel. Cambia el estado entre Pendiente, En preparación y Entregado con un solo toque.</p>
+      </div>
+      <div class="feat-card reveal" style="transition-delay:.3s">
+        <div class="feat-icon">🎨</div>
+        <div class="feat-title">Diseño que impresiona</div>
+        <p class="feat-desc">Tus clientes verán un menú limpio, rápido y moderno. Una experiencia que refleja la calidad de tu cocina.</p>
+      </div>
+      <div class="feat-card reveal" style="transition-delay:.4s">
+        <div class="feat-icon">⚡</div>
+        <div class="feat-title">Sin instalaciones</div>
+        <p class="feat-desc">SimFac funciona 100% desde el navegador. Nada que instalar ni configurar. Abre, regístrate y empieza hoy.</p>
+      </div>
+      <div class="feat-card reveal" style="transition-delay:.5s">
+        <div class="feat-icon">🔒</div>
+        <div class="feat-title">Tu cuenta, tu control</div>
+        <p class="feat-desc">Cada restaurante tiene su propio espacio privado. Tú decides qué se muestra, cuándo y cómo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="container">
+    <div class="how-inner">
+      <div class="reveal">
+        <div class="section-label">Cómo funciona</div>
+        <h2 class="section-title">De la carta física<br>al mundo <em>digital</em><br>en 3 pasos.</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <div class="step-title">Registra tu restaurante</div>
+              <p class="step-desc">Crea tu cuenta con el nombre, descripción y datos de tu negocio. Listo en menos de 2 minutos.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <div class="step-title">Arma tu menú digital</div>
+              <p class="step-desc">Agrega categorías (bebidas, entradas, platos fuertes) y los productos con foto, nombre, precio y descripción.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <div class="step-title">Comparte y gestiona</div>
+              <p class="step-desc">Comparte el enlace o imprime el QR para tus mesas. Los pedidos llegan a tu panel en tiempo real.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard mockup -->
+      <div class="dashboard reveal" style="transition-delay:.2s">
+        <div class="dash-header">
+          <div class="dash-dot"></div>
+          <div class="dash-dot"></div>
+          <div class="dash-dot"></div>
+          <div class="dash-title">Panel del restaurante — La Fogata</div>
+        </div>
+        <div class="dash-body">
+          <div class="dash-row">
+            <div class="dash-card">
+              <div class="dash-card-label">Pedidos hoy</div>
+              <div class="dash-card-val amber">12</div>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card-label">Productos activos</div>
+              <div class="dash-card-val">24</div>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card-label">Estado</div>
+              <div class="dash-card-val green">Abierto</div>
+            </div>
+          </div>
+          <div style="font-size:.72rem; color:var(--muted); margin-bottom:.6rem; font-weight:500;">Pedidos recientes</div>
+          <div class="dash-order-list">
+            <div class="dash-order">
+              <span class="order-status status-prep">En preparación</span>
+              <div class="order-info">
+                <div class="order-name">Pedido #034 · Mesa 2</div>
+                <div class="order-items">Bandeja Paisa, Limonada de Coco</div>
+              </div>
+              <div class="order-total">$36.000</div>
+            </div>
+            <div class="dash-order">
+              <span class="order-status status-pend">Pendiente</span>
+              <div class="order-info">
+                <div class="order-name">Pedido #035 · Mesa 7</div>
+                <div class="order-items">Cazuela de Mariscos × 2</div>
+              </div>
+              <div class="order-total">$70.000</div>
+            </div>
+            <div class="dash-order">
+              <span class="order-status status-done">Entregado</span>
+              <div class="order-info">
+                <div class="order-name">Pedido #033 · Mesa 1</div>
+                <div class="order-items">Arroz con Pollo, Jugo Natural</div>
+              </div>
+              <div class="order-total">$29.000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREVIEW -->
+<section class="preview" id="preview">
+  <div class="container">
+    <div class="preview-inner">
+
+      <div class="preview-phones reveal">
+        <div class="preview-phone">
+          <div class="pp-header" style="background: var(--amber); padding: 1.5rem .8rem .8rem;">
+            <div class="pp-title" style="color:#0A0805;">El Rincón</div>
+            <div style="font-size:.55rem; color:rgba(10,8,5,0.5);">Menú Digital</div>
+          </div>
+          <div class="pp-grid">
+            <div class="pp-item">
+              <div class="pp-emoji">🍜</div>
+              <div class="pp-name">Sopa del día</div>
+              <div class="pp-price">$12.000</div>
+            </div>
+            <div class="pp-item">
+              <div class="pp-emoji">🥩</div>
+              <div class="pp-name">Carne Asada</div>
+              <div class="pp-price">$32.000</div>
+            </div>
+            <div class="pp-item">
+              <div class="pp-emoji">🫔</div>
+              <div class="pp-name">Wrap Pollo</div>
+              <div class="pp-price">$18.000</div>
+            </div>
+            <div class="pp-item">
+              <div class="pp-emoji">🥤</div>
+              <div class="pp-name">Jugo Natural</div>
+              <div class="pp-price">$7.000</div>
+            </div>
+          </div>
+          <div style="padding:.8rem; border-top: 1px solid rgba(245,166,35,0.1);">
+            <div style="background: var(--terra); color:white; border-radius:100px; padding:.5rem; text-align:center; font-size:.65rem; font-weight:600;">Ver carrito (2) · $50.000</div>
+          </div>
+        </div>
+
+        <div class="preview-phone tall">
+          <div class="pp-header" style="background: var(--terra); padding: 1.5rem .8rem .8rem;">
+            <div class="pp-title" style="color:white;">Don Quijote</div>
+            <div style="font-size:.55rem; color:rgba(255,255,255,0.6);">Comida española</div>
+          </div>
+          <div style="padding:.8rem; display: flex; flex-direction: column; gap: .5rem;">
+            <div style="display:flex; gap:.5rem; overflow-x:auto; padding-bottom:.3rem;">
+              <span style="background:var(--terra); color:white; padding:.2rem .6rem; border-radius:100px; font-size:.58rem; white-space:nowrap;">Tapas</span>
+              <span style="border:1px solid #555; color:#888; padding:.2rem .6rem; border-radius:100px; font-size:.58rem; white-space:nowrap;">Paellas</span>
+              <span style="border:1px solid #555; color:#888; padding:.2rem .6rem; border-radius:100px; font-size:.58rem; white-space:nowrap;">Vinos</span>
+            </div>
+            <div style="background:var(--surface); border-radius:10px; padding:.6rem; display:flex; gap:.5rem; align-items:center;">
+              <span style="font-size:1.2rem;">🦐</span>
+              <div style="flex:1">
+                <div style="font-size:.65rem; font-weight:600; color:var(--cream);">Gambas al ajillo</div>
+                <div style="font-size:.55rem; color:var(--muted);">Con pan rústico</div>
+              </div>
+              <div style="font-size:.68rem; font-weight:700; color:var(--amber);">$22.000</div>
+            </div>
+            <div style="background:var(--surface); border-radius:10px; padding:.6rem; display:flex; gap:.5rem; align-items:center;">
+              <span style="font-size:1.2rem;">🥘</span>
+              <div style="flex:1">
+                <div style="font-size:.65rem; font-weight:600; color:var(--cream);">Paella Valenciana</div>
+                <div style="font-size:.55rem; color:var(--muted);">Para dos personas</div>
+              </div>
+              <div style="font-size:.68rem; font-weight:700; color:var(--amber);">$58.000</div>
+            </div>
+            <div style="background:var(--surface); border-radius:10px; padding:.6rem; display:flex; gap:.5rem; align-items:center;">
+              <span style="font-size:1.2rem;">🥗</span>
+              <div style="flex:1">
+                <div style="font-size:.65rem; font-weight:600; color:var(--cream);">Ensalada mixta</div>
+                <div style="font-size:.55rem; color:var(--muted);">Con aderezo especial</div>
+              </div>
+              <div style="font-size:.68rem; font-weight:700; color:var(--amber);">$14.000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay:.2s">
+        <div class="section-label">Lo que ve tu cliente</div>
+        <h2 class="section-title">Una experiencia que<br><em>enamora</em> desde el primer scroll.</h2>
+        <p class="section-sub">Tu cliente escanea el QR y en segundos está viendo tu menú — sin apps, sin cuentas, sin fricción. Solo tus productos, hermosos y ordenados.</p>
+        <ul style="list-style:none; margin-top:1.5rem; display:flex; flex-direction:column; gap:.8rem;">
+          <li style="display:flex; align-items:center; gap:.75rem; color:var(--muted); font-size:.92rem;">
+            <span style="color:#27C478; font-size:1rem;">✓</span> Ve categorías y productos al instante
+          </li>
+          <li style="display:flex; align-items:center; gap:.75rem; color:var(--muted); font-size:.92rem;">
+            <span style="color:#27C478; font-size:1rem;">✓</span> Agrega al carrito sin crear cuenta
+          </li>
+          <li style="display:flex; align-items:center; gap:.75rem; color:var(--muted); font-size:.92rem;">
+            <span style="color:#27C478; font-size:1rem;">✓</span> Envía el pedido con un toque
+          </li>
+          <li style="display:flex; align-items:center; gap:.75rem; color:var(--muted); font-size:.92rem;">
+            <span style="color:#27C478; font-size:1rem;">✓</span> Funciona perfecto en cualquier celular
+          </li>
+        </ul>
+
+        <div class="qr-section" style="margin-top:2rem;">
+          <div class="qr-box">
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="16" height="16" rx="2" fill="none" stroke="#0A0805" stroke-width="2"/>
+              <rect x="6" y="6" width="8" height="8" fill="#0A0805"/>
+              <rect x="26" y="2" width="16" height="16" rx="2" fill="none" stroke="#0A0805" stroke-width="2"/>
+              <rect x="30" y="6" width="8" height="8" fill="#0A0805"/>
+              <rect x="2" y="26" width="16" height="16" rx="2" fill="none" stroke="#0A0805" stroke-width="2"/>
+              <rect x="6" y="30" width="8" height="8" fill="#0A0805"/>
+              <rect x="26" y="26" width="4" height="4" fill="#0A0805"/>
+              <rect x="32" y="26" width="4" height="4" fill="#0A0805"/>
+              <rect x="38" y="26" width="4" height="4" fill="#0A0805"/>
+              <rect x="26" y="32" width="4" height="4" fill="#0A0805"/>
+              <rect x="32" y="38" width="10" height="4" fill="#0A0805"/>
+              <rect x="38" y="32" width="4" height="4" fill="#0A0805"/>
+            </svg>
+          </div>
+          <div>
+            <div class="qr-link">simfac.app/menu/la-fogata</div>
+            <div class="qr-copy">Enlace único para tu restaurante · Copia con un clic</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="registro">
+  <div class="container reveal">
+    <div class="section-label">Empieza ahora</div>
+    <h2 class="section-title">Tu restaurante merece un<br><em>menú a la altura.</em></h2>
+    <p class="section-sub">Únete a los restaurantes que ya modernizaron su experiencia. Gratis, rápido y sin complicaciones.</p>
+    <div class="cta-actions">
+      <a href="registro.html" class="btn-primary">
+        Crear mi menú gratis
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#" class="btn-outline">Ver demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Sim<span>Fac</span></div>
+  <p>© 2025 SimFac · Proyecto formativo SENA</p>
+  <div class="footer-links">
+    <a href="#">Términos</a>
+    <a href="#">Contacto</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Js/script.js"></script>
+<script src="Js/index.js"></script>
+</body>
+</html>

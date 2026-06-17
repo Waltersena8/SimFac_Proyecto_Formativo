@@ -1,0 +1,117 @@
+/* ============================================================
+   SimFac — styles.css
+   Hoja de estilos GLOBAL, compartida por las 10 páginas.
+   Se carga DESPUÉS de Bootstrap y ANTES del CSS propio de cada
+   página (CSS/<pagina>.css), así nuestro diseño siempre tiene
+   prioridad sobre los estilos por defecto de Bootstrap.
+   ============================================================ */
+
+/* ---- Reset base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---- Tipografías del proyecto ----
+   (Los <link> de Google Fonts van en el <head> de cada página) */
+:root {
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Outfit', system-ui, sans-serif;
+}
+
+/* ---- Paleta — Tema oscuro (Landing, Registro, Login, Dashboard,
+   Categorías, Productos, Pedidos) ----
+   Estas mismas variables, con otros valores, se vuelven a declarar
+   dentro del CSS propio de Menú/Carrito/Confirmación (tema claro),
+   y como ese archivo se carga después, sus valores ganan en esas
+   3 páginas sin afectar a las demás. */
+:root {
+  --bg:       #080705;
+  --bg2:      #111009;
+  --bg3:      #1A1710;
+  --surface:  #201D14;
+  --surface2: #272318;
+  --amber:    #F5A623;
+  --amber2:   #FBBF24;
+  --terra:    #E8522A;
+  --cream:    #F5EFE0;
+  --text:     #EDE8DC;
+  --muted:    #7A7060;
+  --border:   rgba(245, 166, 35, 0.13);
+  --success:  #27C478;
+  --danger:   #E8522A;
+  --info:     #60A5FA;
+
+  /* Medidas reutilizadas por el panel de administración */
+  --sidebar: 240px;
+  --topbar: 64px;
+}
+
+/* ---- Animaciones compartidas ---- */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: .3; }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes modal-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Fondo con textura "ruido" reutilizable -----
+   Aplicar la clase .bg-noise al <body> para activarlo. */
+.bg-noise {
+  position: relative;
+}
+.bg-noise::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: .35;
+}
+
+/* ---- Barra de scroll ---- */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface);
+  border-radius: 3px;
+}
+
+/* ---- Foco accesible (no estaba en las páginas originales,
+   se agrega como mejora de accesibilidad sin afectar el diseño) ---- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+/* ---- Selección de texto con la marca ---- */
+::selection {
+  background: rgba(245, 166, 35, 0.3);
+  color: var(--cream, var(--text));
+}

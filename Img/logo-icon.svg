@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SimFac">
+  <defs>
+    <linearGradient id="simfacIconGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#E8522A"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#simfacIconGradient)"/>
+  <line x1="16" y1="13" x2="16" y2="24" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="22" y1="13" x2="22" y2="24" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="28" y1="13" x2="28" y2="24" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M16,24C15,28,15,32,22,33C29,32,29,28,28,24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="22" y1="33" x2="22" y2="52" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="40" y1="22" x2="56" y2="22" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="40" y1="32" x2="56" y2="32" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="40" y1="42" x2="51" y2="42" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

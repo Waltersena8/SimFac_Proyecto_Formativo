@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SimFac — Registrar mi restaurante</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="Img/favicon.svg">
+<link rel="stylesheet" href="CSS/styles.css">
+<link rel="stylesheet" href="CSS/registro.css">
+</head>
+<body>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<!-- LEFT PANEL -->
+<aside class="left-panel">
+  <a href="index.html" class="left-logo">Sim<span>Fac</span></a>
+
+  <div class="left-main">
+    <h2 class="left-headline">Tu restaurante,<br><em>en el mundo</em><br>digital.</h2>
+    <p class="left-sub">Crea tu menú, recibe pedidos y moderniza tu negocio. Todo desde un solo lugar, sin complicaciones.</p>
+
+    <div class="left-features">
+      <div class="left-feat">
+        <div class="left-feat-icon">⚡</div>
+        Listo en menos de 3 minutos
+      </div>
+      <div class="left-feat">
+        <div class="left-feat-icon">📱</div>
+        Menú accesible por QR o enlace
+      </div>
+      <div class="left-feat">
+        <div class="left-feat-icon">🧾</div>
+        Pedidos gestionados desde tu panel
+      </div>
+      <div class="left-feat">
+        <div class="left-feat-icon">🎨</div>
+        Diseño profesional automático
+      </div>
+    </div>
+
+    <div class="preview-card">
+      <div class="pc-label">Tu menú se verá así</div>
+      <div class="pc-row">
+        <div class="pc-emoji">🍖</div>
+        <div class="pc-name">Bandeja Paisa</div>
+        <div class="pc-price">$28.000</div>
+      </div>
+      <div class="pc-row">
+        <div class="pc-emoji">🥤</div>
+        <div class="pc-name">Limonada de Coco</div>
+        <div class="pc-price">$8.000</div>
+      </div>
+      <div class="pc-status">
+        <div class="pc-dot"></div>
+        <div class="pc-online">Tu menú activo y recibiendo pedidos</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="left-bottom">
+    ¿Ya tienes cuenta? <a href="login.html">Inicia sesión →</a>
+  </div>
+</aside>
+
+<!-- RIGHT PANEL -->
+<main class="right-panel">
+  <a href="index.html" class="mobile-logo">Sim<span>Fac</span></a>
+
+  <div class="form-header">
+    <div class="form-step-label">◆ Nuevo restaurante</div>
+    <h1 class="form-title">Crea tu <em>cuenta</em></h1>
+    <p class="form-subtitle">Completa los datos de tu restaurante para empezar.</p>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-wrap" id="progress">
+    <div class="prog-step active" id="ps1">
+      <div class="prog-num">1</div>
+      <span>Tu restaurante</span>
+    </div>
+    <div class="prog-line"></div>
+    <div class="prog-step" id="ps2">
+      <div class="prog-num">2</div>
+      <span>Tu cuenta</span>
+    </div>
+    <div class="prog-line"></div>
+    <div class="prog-step" id="ps3">
+      <div class="prog-num">3</div>
+      <span>Confirmar</span>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <form id="regForm" novalidate>
+
+    <!-- STEP 1: Datos del restaurante -->
+    <div class="form-section active" id="step1">
+
+      <div class="field" id="f-nombre">
+        <label>Nombre del restaurante <span class="required">*</span></label>
+        <div class="input-wrap">
+          <input type="text" id="nombre" placeholder="Ej: La Fogata, El Rincón..." autocomplete="organization">
+          <svg class="icon-left" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <span class="field-error">Por favor ingresa el nombre del restaurante</span>
+      </div>
+
+      <div class="form-row">
+        <div class="field" id="f-tipo">
+          <label>Tipo de cocina <span class="required">*</span></label>
+          <div class="input-wrap">
+            <select id="tipo" class="no-icon" style="padding-left:1rem">
+              <option value="" disabled selected>Selecciona...</option>
+              <option>Comida colombiana</option>
+              <option>Comida rápida</option>
+              <option>Pizzería</option>
+              <option>Mariscos</option>
+              <option>Asados y carnes</option>
+              <option>Vegetariana / Vegana</option>
+              <option>Pastas y comida italiana</option>
+              <option>Sushi y comida japonesa</option>
+              <option>Panadería y café</option>
+              <option>Comida internacional</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <span class="field-error">Selecciona un tipo de cocina</span>
+        </div>
+
+        <div class="field" id="f-ciudad">
+          <label>Ciudad <span class="required">*</span></label>
+          <div class="input-wrap">
+            <input type="text" id="ciudad" placeholder="Ej: Bogotá, Medellín..." autocomplete="address-level2">
+            <svg class="icon-left" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="field-error">Ingresa la ciudad</span>
+        </div>
+      </div>
+
+      <div class="field" id="f-descripcion">
+        <label>Descripción <span class="opt">(opcional)</span></label>
+        <div class="input-wrap area">
+          <textarea id="descripcion" placeholder="Cuéntanos de qué trata tu restaurante, especialidad, ambiente..."></textarea>
+          <svg class="icon-left" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+          </svg>
+        </div>
+        <span class="field-hint">Aparecerá en la cabecera de tu menú digital</span>
+      </div>
+
+      <div class="field">
+        <label>Logo del restaurante <span class="opt">(opcional)</span></label>
+        <div class="logo-upload" id="logoUpload">
+          <input type="file" id="logoInput" accept="image/*">
+          <div id="uploadPlaceholder">
+            <div class="upload-icon">🖼️</div>
+            <div class="upload-label"><strong>Haz clic para subir</strong> o arrastra aquí</div>
+            <div class="upload-sub">PNG, JPG, WEBP · Máximo 2MB</div>
+          </div>
+          <div class="logo-preview" id="logoPreview">
+            <img id="logoImg" src="" alt="Logo preview">
+            <span>Imagen cargada ✓</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-next" onclick="goStep(2)">
+          Continuar
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- STEP 2: Datos del administrador -->
+    <div class="form-section" id="step2">
+
+      <div class="form-row">
+        <div class="field" id="f-fname">
+          <label>Nombre <span class="required">*</span></label>
+          <div class="input-wrap">
+            <input type="text" id="fname" placeholder="Tu nombre" autocomplete="given-name">
+            <svg class="icon-left" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="field-error">Ingresa tu nombre</span>
+        </div>
+        <div class="field" id="f-lname">
+          <label>Apellido <span class="required">*</span></label>
+          <div class="input-wrap">
+            <input type="text" id="lname" placeholder="Tu apellido" autocomplete="family-name">
+            <svg class="icon-left" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="field-error">Ingresa tu apellido</span>
+        </div>
+      </div>
+
+      <div class="field" id="f-email">
+        <label>Correo electrónico <span class="required">*</span></label>
+        <div class="input-wrap">
+          <input type="email" id="email" placeholder="tucorreo@ejemplo.com" autocomplete="email">
+          <svg class="icon-left" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <span class="field-error">Ingresa un correo electrónico válido</span>
+      </div>
+
+      <div class="field" id="f-telefono">
+        <label>Teléfono / Celular <span class="required">*</span></label>
+        <div class="input-wrap">
+          <input type="tel" id="telefono" placeholder="Ej: 3001234567" autocomplete="tel" maxlength="10">
+          <svg class="icon-left" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.09 2.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.86-.86a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <span class="field-error">Ingresa un número de celular válido (10 dígitos)</span>
+      </div>
+
+      <div class="field" id="f-password">
+        <label>Contraseña <span class="required">*</span></label>
+        <div class="input-wrap">
+          <input type="password" id="password" placeholder="Mínimo 8 caracteres" autocomplete="new-password">
+          <svg class="icon-left" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+          </svg>
+          <button type="button" class="pw-toggle" onclick="togglePw('password', this)" aria-label="Mostrar contraseña">
+            <svg id="eye-pw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+        <div class="pw-strength">
+          <div class="pw-strength-bar"><div class="pw-strength-fill" id="pwFill"></div></div>
+          <span class="pw-strength-text" id="pwText">Escribe tu contraseña</span>
+        </div>
+        <span class="field-error">La contraseña debe tener al menos 8 caracteres</span>
+      </div>
+
+      <div class="field" id="f-confirm">
+        <label>Confirmar contraseña <span class="required">*</span></label>
+        <div class="input-wrap">
+          <input type="password" id="confirm" placeholder="Repite tu contraseña" autocomplete="new-password">
+          <svg class="icon-left" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+          </svg>
+          <button type="button" class="pw-toggle" onclick="togglePw('confirm', this)" aria-label="Mostrar contraseña">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+        <span class="field-error">Las contraseñas no coinciden</span>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-back" onclick="goStep(1)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Atrás
+        </button>
+        <button type="button" class="btn-next" onclick="goStep(3)">
+          Continuar
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- STEP 3: Confirmación -->
+    <div class="form-section" id="step3">
+
+      <!-- Resumen -->
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:1.2rem; display:flex; flex-direction:column; gap:.7rem;">
+        <div style="font-size:.75rem; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); margin-bottom:.2rem;">Resumen de tu registro</div>
+        <div style="display:flex; justify-content:space-between; align-items:center; font-size:.88rem;">
+          <span style="color:var(--muted);">Restaurante</span>
+          <span id="sum-nombre" style="color:var(--cream); font-weight:500;">—</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; font-size:.88rem;">
+          <span style="color:var(--muted);">Tipo de cocina</span>
+          <span id="sum-tipo" style="color:var(--cream); font-weight:500;">—</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; font-size:.88rem;">
+          <span style="color:var(--muted);">Ciudad</span>
+          <span id="sum-ciudad" style="color:var(--cream); font-weight:500;">—</span>
+        </div>
+        <div style="border-top:1px solid var(--border); margin:.2rem 0;"></div>
+        <div style="display:flex; justify-content:space-between; align-items:center; font-size:.88rem;">
+          <span style="color:var(--muted);">Administrador</span>
+          <span id="sum-admin" style="color:var(--cream); font-weight:500;">—</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; font-size:.88rem;">
+          <span style="color:var(--muted);">Correo</span>
+          <span id="sum-email" style="color:var(--amber); font-weight:500; font-size:.82rem;">—</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; font-size:.88rem;">
+          <span style="color:var(--muted);">Teléfono</span>
+          <span id="sum-tel" style="color:var(--cream); font-weight:500;">—</span>
+        </div>
+      </div>
+
+      <div class="check-field">
+        <input type="checkbox" id="terminos">
+        <label for="terminos">Acepto los <a href="#">Términos y condiciones</a> y la <a href="#">Política de privacidad</a> de SimFac.</label>
+      </div>
+
+      <div class="check-field">
+        <input type="checkbox" id="marketing" checked>
+        <label for="marketing">Quiero recibir novedades y actualizaciones de SimFac por correo electrónico.</label>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-back" onclick="goStep(2)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Atrás
+        </button>
+        <button type="button" class="btn-next" onclick="submitForm()" id="btnSubmit">
+          Crear mi restaurante 🎉
+        </button>
+      </div>
+
+    </div>
+
+  </form>
+
+  <!-- SUCCESS -->
+  <div class="success-view" id="successView">
+    <div class="success-icon">🎉</div>
+    <h2 class="success-title">¡Bienvenido a SimFac!</h2>
+    <p class="success-sub">Tu restaurante fue creado exitosamente. Ya puedes empezar a construir tu menú digital.</p>
+    <div class="success-link" id="successLink">
+      <span>🔗</span>
+      <span id="menuSlug">simfac.app/menu/tu-restaurante</span>
+    </div>
+    <button class="btn-go" onclick="window.location.href='dashboard.html'">Ir a mi panel →</button>
+  </div>
+
+  <p class="login-link" id="loginLink">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Js/script.js"></script>
+<script src="Js/registro.js"></script>
+</body>
+</html>
